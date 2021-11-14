@@ -324,3 +324,9 @@ def t_error(t):
     t.lexer.skip(1)
 
 lexer = lex.lex() #Builds lexer
+
+while True: #toxenize
+  token = lexer.token() #while true tokenize the input
+  if not token:
+     break      # stop as there is no more input
+  print(token) #print token
