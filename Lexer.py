@@ -1,5 +1,6 @@
 import ply.lex as lex
 
+
 #Use the ply documentation for reference: https://ply.readthedocs.io/en/latest/ply.html#introduction
 
 #Always declare tokens here in Tokens_list
@@ -176,7 +177,7 @@ def t_ID(t):  #This should check for reserved words
     t.type = reserved.get(t.value, 'ID')
     return t
 
-t_NUMBERS = r'[0-9]+[.][0-9]+' #Should allow more than one combination of digits, followed by another combination
+t_NUMBERS = r'[[0-9]+[.][0-9]+' #Should allow more than one combination of digits, followed by another combination
 
 
 #Keyboard SpecialCharacters
@@ -287,13 +288,8 @@ def t_EQUAL(t):
     return t
 
 def t_BACKSPACE(t):
-    r'KChar_RBRACKET'
+    r'KChar_BACKSPACE'
     t.value = 'BACKSPACE'
-    return t
-
-def t_RBRACKET(t):
-    r'KChar_RBRACKET'
-    t.value = 'RBRACKET'
     return t
 
 #Keyboard Directionals
