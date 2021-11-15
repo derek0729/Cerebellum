@@ -75,3 +75,5 @@ def p_keyboardList(p): #IDs and other types excluded
     | DOWN
     | RIGHT
     '''
+
+    parser = yacc.yacc()
