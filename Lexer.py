@@ -19,7 +19,7 @@ tokens = (
     'RBRACKET', 'LBRACKET', 'BACKSLASH', 'DASH', 'EQUAL', 'BACKSPACE',
     'LEFT', 'UP', 'DOWN', 'RIGHT'
 
-)  # End of Token_list
+)  # End of tokens
 
 
 # def funtion values for tokens as per ply documentation, use format accordingly for future reference
