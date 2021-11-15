@@ -77,3 +77,14 @@ def p_keyboardList(p): #IDs and other types excluded
     '''
 
     parser = yacc.yacc()
+
+
+    #From sample calculator parser, this is what allows inputs to be added and used when running:
+    # while True:
+    #     try:
+    #         s = input('calc > ')
+    #     except EOFError:
+    #         break
+    #     if not s: continue
+    #     result = parser.parse(s)
+    #     print(result)
