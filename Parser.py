@@ -1,6 +1,6 @@
 import ply.yacc as yacc
 import Lexer
-from Lexer import tokens
+tokens = Lexer.tokens
 
 
 # Placeholder grammar expression reference:
@@ -18,6 +18,26 @@ from Lexer import tokens
 # def p_foo(p):
 #     'foo : bar X'
 #######################FOR LARGER GRAMMAR SUBSETS###########################
+
+
+#######################p.value ASSINGNING SAMPLE############################
+# def p_expression_plus(p):
+#     'expression : expression PLUS term'
+#     #   ^            ^        ^    ^
+#     #  p[0]         p[1]     p[2] p[3]
+#
+#     p[0] = p[1] + p[3]
+#######################p.value ASSINGNING SAMPLE############################
+
+def SpeedFunc(p): #Defined what speed is
+    'SpeedFunc : SPEED EQUALS NUMBERS'
+    print(type)
+    p[0] = p[3]
+
+def GravityFunc(p): #Defined what gravity is
+    'GravityFunc : GRAVITY EQUALS NUMBERS'
+    print(type)
+    p[0] = p[3]
 
 
 def p_keyboardList(p): #IDs and other types excluded

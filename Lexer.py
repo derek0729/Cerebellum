@@ -6,7 +6,7 @@ import ply.lex as lex
 # List of Keys and other inputs (Update as needed):
 tokens = (
     #IDs and other types
-    'ID', 'NUMBERS',
+    'ID', 'NUMBERS', 'SPEED', 'GRAVITY',
 
     #Keyboard Letters
     'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
@@ -17,12 +17,26 @@ tokens = (
     'BACKQUOTE', 'TAB', 'CAPSLOCK', 'LSHIFT', 'LCTRL', 'LALT', 'SPACEBAR',
     'RALT', 'RCTRL', 'COMMA', 'SLASH', 'RSHIFT', 'PERIOD', 'SEMICOLON', 'QUOTE', 'ENTER',
     'RBRACKET', 'LBRACKET', 'BACKSLASH', 'DASH', 'EQUAL', 'BACKSPACE',
-    'LEFT', 'UP', 'DOWN', 'RIGHT'
+    'LEFT', 'UP', 'DOWN', 'RIGHT',
+
+    #Unity API (Subject to change and experimentation)
+
+    'RIGIDBODY', 'RIGIDBODY2D', 'SLIDERJOINT2D', 'CHARACTERCONTROLLER'
 
 )  # End of tokens
 
 
 # def funtion values for tokens as per ply documentation, use format accordingly for future reference
+
+#IDs from Unity
+def t_SPEED(t):
+    r'SPEED'
+    t.type = 'SPEED'
+
+def t_GRAVITY(t):
+    r'GRAVITY'
+    t.type = 'GRAVITY'
+
 # Keyboard Letters
 def t_Q(t):
     r'Letter_Q'
@@ -357,6 +371,26 @@ def t_DOWN(t):
 def t_RIGHT(t):
     r'KDirectional_RIGHT'
     t.value = 'RIGHT'
+    return t
+
+def t_RIGIDBODY(t):
+    r'RIGIDBODY'
+    t.value = 'RIGIDBODY'
+    return t
+
+def t_RIGIDBODY2D(t):
+    r'RIGIDBODY2D'
+    t.value = 'RIGIDBODY2D'
+    return t
+
+def t_SLIDERJOINT2D(t):
+    r'SLIDERJOINT2D'
+    t.value = 'SLIDERJOINT2D'
+    return t
+
+def t_CHARACTERCONTROLLER(t):
+    r'CHARACTERCONTROLLER'
+    t.value = 'CHARACTERCONTROLLER'
     return t
 
 
