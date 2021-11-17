@@ -6,7 +6,7 @@ import ply.lex as lex
 # List of Keys and other inputs (Update as needed):
 tokens = (
     #IDs and other types
-    'ID', 'NUMBERS', 'SPEED', 'GRAVITY',
+    'ID', 'FLOAT', 'EQUALS', 'SPEED', 'GRAVITY',
 
     #Keyboard Letters
     'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
@@ -20,8 +20,10 @@ tokens = (
     'LEFT', 'UP', 'DOWN', 'RIGHT',
 
     #Unity API (Subject to change and experimentation)
+    'RIGIDBODY', 'RIGIDBODY2D', 'SLIDERJOINT2D', 'CHARACTERCONTROLLER',
 
-    'RIGIDBODY', 'RIGIDBODY2D', 'SLIDERJOINT2D', 'CHARACTERCONTROLLER'
+    #Directionals
+    'NONE', 'LEFT', 'UP', 'DOWN', 'RIGHT'
 
 )  # End of tokens
 
@@ -210,7 +212,10 @@ def t_ID(t):  # This should check for reserved words
     return t
 
 
-t_NUMBERS = r'[0-9]+[.][0-9]+' #Should allow more than one combination of digits, followed by another combination
+t_FLOAT = r'[0-9]+[.][0-9]+' #Should allow more than one combination of digits, followed by another combination
+
+t_EQUALS = r'\='
+
 t_ignore = ' \t'
 
 
@@ -351,26 +356,31 @@ def t_BACKSPACE(t):
 # Keyboard Directionals
 
 def t_LEFT(t):
-    r'KDirectional_LEFT'
+    r'Directional_LEFT'
     t.value = 'LEFT'
     return t
 
 
 def t_UP(t):
-    r'KDirectional_UP'
+    r'Directional_UP'
     t.value = 'UP'
     return t
 
 
 def t_DOWN(t):
-    r'KDirectional_DOWN'
+    r'Directional_DOWN'
     t.value = 'DOWN'
     return t
 
 
 def t_RIGHT(t):
-    r'KDirectional_RIGHT'
+    r'Directional_RIGHT'
     t.value = 'RIGHT'
+    return t
+
+def t_NONE(t):
+    r'Directional_NONE'
+    t.value = 'NONE'
     return t
 
 def t_RIGIDBODY(t):
