@@ -29,21 +29,21 @@ tokens = Lexer.tokens
 #     p[0] = p[1] + p[3]
 #######################p.value ASSINGNING SAMPLE############################
 
-def Scripts(p):  #Scripttypes, Sample and charactercontroller scripts in the works
+def p_Scripts(p):  #Scripttypes, Sample and charactercontroller scripts in the works
     '''SAMPLE
     | RIGIDBODY2D'''
 
-def SpeedFunc(p): #Defined what speed is
+def p_SpeedFunc(p): #Defined what speed is
     'SpeedFunc : SPEED EQUALS FLOAT'
     print(type)
     p[0] = p[3]
 
-def GravityFunc(p): #Defined what gravity is
+def p_GravityFunc(p): #Defined what gravity is
     'GravityFunc : GRAVITY EQUALS FLOAT'
     print(type)
     p[0] = p[3]
 
-def DirectionFunc(p): #Directionals needed
+def p_DirectionFunc(p): #Directionals needed
     '''DirectionFunc : NONE
     | LEFT
     | UP
@@ -52,7 +52,7 @@ def DirectionFunc(p): #Directionals needed
     p[0] = p[1]
 
 
-def MovementFunc(p):
+def p_MovementFunc(p):
     'Movement : ID EQUALS DirectionFunc ID EQUALS DirectionFunc'
     # ^         ^     ^       ^         ^     ^       ^
     #p[0]      p[1]  p[2]    p[3]      p[4]  p[5]    p[6]
