@@ -29,6 +29,10 @@ tokens = Lexer.tokens
 #     p[0] = p[1] + p[3]
 #######################p.value ASSINGNING SAMPLE############################
 
+def Scripts(p):  #Scripttypes, Sample and charactercontroller scripts in the works
+    '''SAMPLE
+    | RIGIDBODY2D'''
+
 def SpeedFunc(p): #Defined what speed is
     'SpeedFunc : SPEED EQUALS FLOAT'
     print(type)

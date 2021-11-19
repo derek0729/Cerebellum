@@ -5,6 +5,9 @@ import ply.lex as lex
 # Always declare tokens here in Tokens_list
 # List of Keys and other inputs (Update as needed):
 tokens = (
+    #Scripts
+    'SAMPLE', 'RIGIDMOTION',
+
     #IDs and other types
     'ID', 'FLOAT', 'EQUALS', 'SPEED', 'GRAVITY',
 
@@ -23,12 +26,22 @@ tokens = (
     'RIGIDBODY', 'RIGIDBODY2D', 'SLIDERJOINT2D', 'CHARACTERCONTROLLER',
 
     #Directionals
-    'NONE', 'LEFT', 'UP', 'DOWN', 'RIGHT'
+    'NONE', 'HORIZONTAL', 'VERTICAL'
 
 )  # End of tokens
 
 
 # def funtion values for tokens as per ply documentation, use format accordingly for future reference
+
+#Scripts
+def t_SAMPLE(t):
+    r'SAMPLE'
+    t.value = 'SAMPLE'
+
+def t_RIGIDMOTION(t):
+    r'RIGIDMOTION'
+    t.value = 'RIGIDMOTION'
+
 
 #IDs from Unity
 def t_SPEED(t):
@@ -355,27 +368,15 @@ def t_BACKSPACE(t):
 
 # Keyboard Directionals
 
-def t_LEFT(t):
+def t_HORIZONTAL(t):
     r'Directional_LEFT'
     t.value = 'LEFT'
     return t
 
 
-def t_UP(t):
+def t_VERTICAL(t):
     r'Directional_UP'
     t.value = 'UP'
-    return t
-
-
-def t_DOWN(t):
-    r'Directional_DOWN'
-    t.value = 'DOWN'
-    return t
-
-
-def t_RIGHT(t):
-    r'Directional_RIGHT'
-    t.value = 'RIGHT'
     return t
 
 def t_NONE(t):
