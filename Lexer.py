@@ -6,7 +6,7 @@ import ply.lex as lex
 # List of Keys and other inputs (Update as needed):
 tokens = (
     #Scripts
-    'SAMPLE', 'RIGIDMOTION',
+    'SAMPLE', 'RIGIDMOTION', 'CHARACTERCONTROLLER',
 
     #IDs and other types
     'ID', 'FLOAT', 'EQUALS', 'SPEED', 'GRAVITY',
@@ -23,10 +23,10 @@ tokens = (
     'LEFT', 'UP', 'DOWN', 'RIGHT',
 
     #Unity API (Subject to change and experimentation)
-    'RIGIDBODY', 'RIGIDBODY2D', 'SLIDERJOINT2D', 'CHARACTERCONTROLLER',
+    'RIGIDBODY', 'RIGIDBODY2D', 'SLIDERJOINT2D',
 
     #Directionals
-    'NONE', 'HORIZONTAL', 'VERTICAL'
+    'NONE', 'MoveX', 'MoveY'
 
 )  # End of tokens
 
@@ -368,15 +368,15 @@ def t_BACKSPACE(t):
 
 # Keyboard Directionals
 
-def t_HORIZONTAL(t):
-    r'Directional_LEFT'
-    t.value = 'LEFT'
+def t_MoveX(t):
+    r'mDirectional_MoveX'
+    t.value = 'MoveX'
     return t
 
 
-def t_VERTICAL(t):
-    r'Directional_UP'
-    t.value = 'UP'
+def t_MoveY(t):
+    r'Directional_MoveY'
+    t.value = 'MoveY'
     return t
 
 def t_NONE(t):

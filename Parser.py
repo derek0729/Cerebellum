@@ -45,10 +45,8 @@ def p_GravityFunc(p): #Defined what gravity is
 
 def p_DirectionFunc(p): #Directionals needed
     '''DirectionFunc : NONE
-    | LEFT
-    | UP
-    | DOWN
-    | RIGHT'''
+    | MoveX
+    | MoveY'''
     p[0] = p[1]
 
 
