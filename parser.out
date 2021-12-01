@@ -1,0 +1,420 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> script
+Rule 1     script -> Regular
+Rule 2     script -> TopDown
+Rule 3     script -> Flight
+Rule 4     Regular -> REGULAR Speedfunc Movement
+Rule 5     TopDown -> TOPDOWN Speedfunc Movement
+Rule 6     Flight -> FLIGHT Speedfunc Movement
+Rule 7     Speedfunc -> Speed EQUALS Float
+Rule 8     Movement -> ID EQUALS Direction ID EQUALS Direction
+Rule 9     Direction -> Horizontal
+Rule 10    Direction -> Vertical
+Rule 11    Direction -> NONE
+Rule 12    KeyCode -> <empty>
+Rule 13    KeyCode -> A
+Rule 14    KeyCode -> B
+Rule 15    KeyCode -> C
+Rule 16    KeyCode -> D
+Rule 17    KeyCode -> E
+Rule 18    KeyCode -> F
+Rule 19    KeyCode -> G
+Rule 20    KeyCode -> H
+Rule 21    KeyCode -> I
+Rule 22    KeyCode -> J
+Rule 23    KeyCode -> K
+Rule 24    KeyCode -> L
+Rule 25    KeyCode -> M
+Rule 26    KeyCode -> N
+Rule 27    KeyCode -> O
+Rule 28    KeyCode -> P
+Rule 29    KeyCode -> Q
+Rule 30    KeyCode -> R
+Rule 31    KeyCode -> S
+Rule 32    KeyCode -> T
+Rule 33    KeyCode -> U
+Rule 34    KeyCode -> V
+Rule 35    KeyCode -> W
+Rule 36    KeyCode -> X
+Rule 37    KeyCode -> Y
+Rule 38    KeyCode -> Z
+Rule 39    KeyCode -> Backspace
+Rule 40    KeyCode -> Tab
+Rule 41    KeyCode -> SysReq
+Rule 42    KeyCode -> Break
+Rule 43    KeyCode -> CapsLock
+Rule 44    KeyCode -> ScrollLock
+Rule 45    KeyCode -> RightShift
+Rule 46    KeyCode -> LeftShift
+Rule 47    KeyCode -> RightControl
+Rule 48    KeyCode -> LeftControl
+Rule 49    KeyCode -> RightAlt
+Rule 50    KeyCode -> LeftAlt
+Rule 51    KeyCode -> RightCommand
+Rule 52    KeyCode -> RightApple
+Rule 53    KeyCode -> LeftCommand
+Rule 54    KeyCode -> LeftWindows
+Rule 55    KeyCode -> RightWindows
+Rule 56    KeyCode -> AltGr
+Rule 57    KeyCode -> Help
+Rule 58    KeyCode -> Print
+Rule 59    KeyCode -> Clear
+Rule 60    KeyCode -> Return
+Rule 61    KeyCode -> Pause
+Rule 62    KeyCode -> Escape
+Rule 63    KeyCode -> Space
+Rule 64    KeyCode -> Exclaim
+Rule 65    KeyCode -> DoubleQuote
+Rule 66    KeyCode -> Hash
+Rule 67    KeyCode -> Dollar
+Rule 68    KeyCode -> Ampersand
+Rule 69    KeyCode -> Quote
+Rule 70    KeyCode -> LeftParen
+Rule 71    KeyCode -> RightParen
+Rule 72    KeyCode -> Asterisk
+Rule 73    KeyCode -> Plus
+Rule 74    KeyCode -> Comma
+Rule 75    KeyCode -> Minus
+Rule 76    KeyCode -> Period
+Rule 77    KeyCode -> Slash
+Rule 78    KeyCode -> Colon
+Rule 79    KeyCode -> Semicolon
+Rule 80    KeyCode -> Less
+Rule 81    KeyCode -> Equals
+Rule 82    KeyCode -> Greater
+Rule 83    KeyCode -> Question
+Rule 84    KeyCode -> At
+Rule 85    KeyCode -> LeftBracket
+Rule 86    KeyCode -> Backslash
+Rule 87    KeyCode -> RightBracket
+Rule 88    KeyCode -> Caret
+Rule 89    KeyCode -> Underscore
+Rule 90    KeyCode -> BackQuote
+
+Terminals, with rules where they appear
+
+A                    : 13
+AltGr                : 56
+Ampersand            : 68
+Asterisk             : 72
+At                   : 84
+B                    : 14
+BackQuote            : 90
+Backslash            : 86
+Backspace            : 39
+Break                : 42
+C                    : 15
+CapsLock             : 43
+Caret                : 88
+Clear                : 59
+Colon                : 78
+Comma                : 74
+D                    : 16
+Dollar               : 67
+DoubleQuote          : 65
+E                    : 17
+EQUALS               : 7 8 8
+Equals               : 81
+Escape               : 62
+Exclaim              : 64
+F                    : 18
+FLIGHT               : 6
+Float                : 7
+G                    : 19
+Greater              : 82
+H                    : 20
+Hash                 : 66
+Help                 : 57
+Horizontal           : 9
+I                    : 21
+ID                   : 8 8
+J                    : 22
+K                    : 23
+L                    : 24
+LeftAlt              : 50
+LeftBracket          : 85
+LeftCommand          : 53
+LeftControl          : 48
+LeftParen            : 70
+LeftShift            : 46
+LeftWindows          : 54
+Less                 : 80
+M                    : 25
+Minus                : 75
+N                    : 26
+NONE                 : 11
+O                    : 27
+P                    : 28
+Pause                : 61
+Period               : 76
+Plus                 : 73
+Print                : 58
+Q                    : 29
+Question             : 83
+Quote                : 69
+R                    : 30
+REGULAR              : 4
+Return               : 60
+RightAlt             : 49
+RightApple           : 52
+RightBracket         : 87
+RightCommand         : 51
+RightControl         : 47
+RightParen           : 71
+RightShift           : 45
+RightWindows         : 55
+S                    : 31
+ScrollLock           : 44
+Semicolon            : 79
+Slash                : 77
+Space                : 63
+Speed                : 7
+SysReq               : 41
+T                    : 32
+TOPDOWN              : 5
+Tab                  : 40
+U                    : 33
+Underscore           : 89
+V                    : 34
+Vertical             : 10
+W                    : 35
+X                    : 36
+Y                    : 37
+Z                    : 38
+error                : 
+
+Nonterminals, with rules where they appear
+
+Direction            : 8 8
+Flight               : 3
+KeyCode              : 
+Movement             : 4 5 6
+Regular              : 1
+Speedfunc            : 4 5 6
+TopDown              : 2
+script               : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . script
+    (1) script -> . Regular
+    (2) script -> . TopDown
+    (3) script -> . Flight
+    (4) Regular -> . REGULAR Speedfunc Movement
+    (5) TopDown -> . TOPDOWN Speedfunc Movement
+    (6) Flight -> . FLIGHT Speedfunc Movement
+
+    REGULAR         shift and go to state 5
+    TOPDOWN         shift and go to state 6
+    FLIGHT          shift and go to state 7
+
+    script                         shift and go to state 1
+    Regular                        shift and go to state 2
+    TopDown                        shift and go to state 3
+    Flight                         shift and go to state 4
+
+state 1
+
+    (0) S' -> script .
+
+
+
+state 2
+
+    (1) script -> Regular .
+
+    $end            reduce using rule 1 (script -> Regular .)
+
+
+state 3
+
+    (2) script -> TopDown .
+
+    $end            reduce using rule 2 (script -> TopDown .)
+
+
+state 4
+
+    (3) script -> Flight .
+
+    $end            reduce using rule 3 (script -> Flight .)
+
+
+state 5
+
+    (4) Regular -> REGULAR . Speedfunc Movement
+    (7) Speedfunc -> . Speed EQUALS Float
+
+    Speed           shift and go to state 9
+
+    Speedfunc                      shift and go to state 8
+
+state 6
+
+    (5) TopDown -> TOPDOWN . Speedfunc Movement
+    (7) Speedfunc -> . Speed EQUALS Float
+
+    Speed           shift and go to state 9
+
+    Speedfunc                      shift and go to state 10
+
+state 7
+
+    (6) Flight -> FLIGHT . Speedfunc Movement
+    (7) Speedfunc -> . Speed EQUALS Float
+
+    Speed           shift and go to state 9
+
+    Speedfunc                      shift and go to state 11
+
+state 8
+
+    (4) Regular -> REGULAR Speedfunc . Movement
+    (8) Movement -> . ID EQUALS Direction ID EQUALS Direction
+
+    ID              shift and go to state 13
+
+    Movement                       shift and go to state 12
+
+state 9
+
+    (7) Speedfunc -> Speed . EQUALS Float
+
+    EQUALS          shift and go to state 14
+
+
+state 10
+
+    (5) TopDown -> TOPDOWN Speedfunc . Movement
+    (8) Movement -> . ID EQUALS Direction ID EQUALS Direction
+
+    ID              shift and go to state 13
+
+    Movement                       shift and go to state 15
+
+state 11
+
+    (6) Flight -> FLIGHT Speedfunc . Movement
+    (8) Movement -> . ID EQUALS Direction ID EQUALS Direction
+
+    ID              shift and go to state 13
+
+    Movement                       shift and go to state 16
+
+state 12
+
+    (4) Regular -> REGULAR Speedfunc Movement .
+
+    $end            reduce using rule 4 (Regular -> REGULAR Speedfunc Movement .)
+
+
+state 13
+
+    (8) Movement -> ID . EQUALS Direction ID EQUALS Direction
+
+    EQUALS          shift and go to state 17
+
+
+state 14
+
+    (7) Speedfunc -> Speed EQUALS . Float
+
+    Float           shift and go to state 18
+
+
+state 15
+
+    (5) TopDown -> TOPDOWN Speedfunc Movement .
+
+    $end            reduce using rule 5 (TopDown -> TOPDOWN Speedfunc Movement .)
+
+
+state 16
+
+    (6) Flight -> FLIGHT Speedfunc Movement .
+
+    $end            reduce using rule 6 (Flight -> FLIGHT Speedfunc Movement .)
+
+
+state 17
+
+    (8) Movement -> ID EQUALS . Direction ID EQUALS Direction
+    (9) Direction -> . Horizontal
+    (10) Direction -> . Vertical
+    (11) Direction -> . NONE
+
+    Horizontal      shift and go to state 20
+    Vertical        shift and go to state 21
+    NONE            shift and go to state 22
+
+    Direction                      shift and go to state 19
+
+state 18
+
+    (7) Speedfunc -> Speed EQUALS Float .
+
+    ID              reduce using rule 7 (Speedfunc -> Speed EQUALS Float .)
+
+
+state 19
+
+    (8) Movement -> ID EQUALS Direction . ID EQUALS Direction
+
+    ID              shift and go to state 23
+
+
+state 20
+
+    (9) Direction -> Horizontal .
+
+    ID              reduce using rule 9 (Direction -> Horizontal .)
+    $end            reduce using rule 9 (Direction -> Horizontal .)
+
+
+state 21
+
+    (10) Direction -> Vertical .
+
+    ID              reduce using rule 10 (Direction -> Vertical .)
+    $end            reduce using rule 10 (Direction -> Vertical .)
+
+
+state 22
+
+    (11) Direction -> NONE .
+
+    ID              reduce using rule 11 (Direction -> NONE .)
+    $end            reduce using rule 11 (Direction -> NONE .)
+
+
+state 23
+
+    (8) Movement -> ID EQUALS Direction ID . EQUALS Direction
+
+    EQUALS          shift and go to state 24
+
+
+state 24
+
+    (8) Movement -> ID EQUALS Direction ID EQUALS . Direction
+    (9) Direction -> . Horizontal
+    (10) Direction -> . Vertical
+    (11) Direction -> . NONE
+
+    Horizontal      shift and go to state 20
+    Vertical        shift and go to state 21
+    NONE            shift and go to state 22
+
+    Direction                      shift and go to state 25
+
+state 25
+
+    (8) Movement -> ID EQUALS Direction ID EQUALS Direction .
+
+    $end            reduce using rule 8 (Movement -> ID EQUALS Direction ID EQUALS Direction .)
+

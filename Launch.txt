@@ -1,0 +1,9 @@
+REGULAR
+Speed = 1.0
+moveX = Horizontal
+moveY = Vertical
+
+
+
+
+
