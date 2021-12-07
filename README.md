@@ -21,7 +21,7 @@ Cerebellum is a response to accessibility in the Unity’s ecosystem in hopes of
 
 `3` Build scripts in code for Unity Game Engine
 
-#Video Demo
+# Video Demo
 
 [Phase 3 -(Demo).zip](https://github.com/derek0729/Cerebellum/files/7672242/Phase.3.-.Demo.zip)
 
